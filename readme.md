@@ -1,6 +1,6 @@
 # Bs-Harp
 
-Harp + browser-sync + Bootstrap
+Harp + browser-sync + Bootstrap-Sass
 
 ## Install
 
@@ -72,6 +72,9 @@ $ harp compile;gulp dist
 ```
 
 ## Change Log
+
+### v.1.4 (2016.1)
+Use Bootstrap Sass
 
 ### v.1.3.2 (2016.1)
 Install gulp-autoprefixer

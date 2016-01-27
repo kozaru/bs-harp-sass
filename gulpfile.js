@@ -42,11 +42,11 @@ var config = {
   'distIMG': './dist/images/',
   'distTemplates': 'dist/Templates/',
   'distLibrary': 'dist/Library/',
-  'bsLESS': './node_modules/bootstrap/less/**',
+  'bsSass': './node_modules/bootstrap-sass/assets/stylesheets/**',
   'bsFONT': './node_modules/bootstrap/fonts/**',
   'bsJSmin': './node_modules/bootstrap/dist/js/bootstrap.min.js',
   'bsJQUERY': './node_modules/jquery/dist/jquery.min.js',
-  'publicLESS': './public/css/_bs/',
+  'publicSass': './public/css/',
   'publicFONT': './public/fonts/',
   'publicJS': './public/js/'
 }
@@ -129,9 +129,14 @@ gulp.task('server', function () {
 });
 
 // bootstrap
-gulp.task('bsless', function() {
-  return gulp.src(config.bsLESS)
-  .pipe(gulp.dest(config.publicLESS));
+// gulp.task('bsless', function() {
+//   return gulp.src(config.bsLESS)
+//   .pipe(gulp.dest(config.publicLESS));
+// });
+
+gulp.task('bsSass', function() {
+  return gulp.src(config.bsSass)
+  .pipe(gulp.dest(config.publicSass));
 });
 
 gulp.task('bsfonts', function() {
@@ -151,7 +156,7 @@ gulp.task('bsjquery', function() {
 
 gulp.task('bs', function() {
   runSequence(
-    'bsless',
+    'bsSass',
     'bsfonts',
     'bsjsmin',
     'bsjquery'
