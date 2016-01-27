@@ -1,7 +1,11 @@
 bower/*
 dist/*
 node_modules/*
-public/css/_bs/*
+public/css/_bootstrap-compass.scss
+public/css/_bootstrap-mincer.scss
+public/css/_bootstrap-sprockets.scss
+public/css/_bootstrap.scss
+public/css/bootstrap/*
 public/js/*
 !public/js/custom.js
 public/fonts/*

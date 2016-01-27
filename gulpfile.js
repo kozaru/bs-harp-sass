@@ -15,7 +15,7 @@ var fs = require('fs');
 var path = require('path');
 
 var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 9',
@@ -41,11 +41,11 @@ var config = {
   'distIMG': './dist/images/',
   'distTemplates': 'dist/Templates/',
   'distLibrary': 'dist/Library/',
-  'bsLESS': './node_modules/bootstrap/less/**',
+  'bsSass': './node_modules/bootstrap-sass/assets/stylesheets/**',
   'bsFONT': './node_modules/bootstrap/fonts/**',
   'bsJSmin': './node_modules/bootstrap/dist/js/bootstrap.min.js',
   'bsJQUERY': './node_modules/jquery/dist/jquery.min.js',
-  'publicLESS': './public/css/_bs/',
+  'publicSass': './public/css/',
   'publicFONT': './public/fonts/',
   'publicJS': './public/js/'
 }
@@ -118,17 +118,24 @@ gulp.task('changeRelativePath', function() {
 });
 
 // browserSync
+// use default task to launch Browsersync and watch files
 gulp.task('server', function () {
-  browserSync({
-    files:['./public/*.jade ,./public/*/*.jade, ./public/*.json, ./public/*/*.json, public/js/*.js,./public/js/*/*.js, ./public/css/*.less ,./public/css/*/*.less, ./public/css/*.scss ,public/css/*/*.scss'],
+  browserSync.init({
     proxy: 'localhost:9000'
   });
+  // all browsers reload after tasks are complete.
+  gulp.watch(['./public/**/*']).on('change', browserSync.reload);
 });
 
 // bootstrap
-gulp.task('bsless', function() {
-  return gulp.src(config.bsLESS)
-  .pipe(gulp.dest(config.publicLESS));
+// gulp.task('bsless', function() {
+//   return gulp.src(config.bsLESS)
+//   .pipe(gulp.dest(config.publicLESS));
+// });
+
+gulp.task('bsSass', function() {
+  return gulp.src(config.bsSass)
+  .pipe(gulp.dest(config.publicSass));
 });
 
 gulp.task('bsfonts', function() {
@@ -148,7 +155,7 @@ gulp.task('bsjquery', function() {
 
 gulp.task('bs', function() {
   runSequence(
-    'bsless',
+    'bsSass',
     'bsfonts',
     'bsjsmin',
     'bsjquery'
