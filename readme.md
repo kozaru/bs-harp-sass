@@ -1,4 +1,4 @@
-# Bs-Harp
+# Bs-Harp-Sass
 
 Harp + browser-sync + Bootstrap-Sass
 
