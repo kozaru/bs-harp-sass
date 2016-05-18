@@ -73,6 +73,11 @@ $ harp compile;gulp dist
 
 ## Change Log
 
+### v.1.0.0 (2016.5)
+
+
+## Change Log [Bs-Harp](https://github.com/kozaru/bs-harp)
+
 ### v.1.4 (2016.1)
 Use Bootstrap Sass
 

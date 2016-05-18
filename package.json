@@ -1,6 +1,6 @@
 {
-  "name": "bs3harp",
-  "version": "1.3.2",
+  "name": "bs3harpsass",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
