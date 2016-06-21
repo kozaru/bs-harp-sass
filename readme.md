@@ -72,6 +72,8 @@ $ harp compile;gulp dist
 ```
 
 ## Change Log
+### v.1.0.1 (2016.6)
+Fix bugs
 
 ### v.1.0.0 (2016.5)
 

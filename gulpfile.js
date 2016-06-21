@@ -40,8 +40,6 @@ var config = {
   'distCSS': './dist/css/',
   'distJS': './dist/js/',
   'distIMG': './dist/images/',
-  'distTemplates': 'dist/Templates/',
-  'distLibrary': 'dist/Library/',
   'bsSass': './node_modules/bootstrap-sass/assets/stylesheets/**',
   'bsFONT': './node_modules/bootstrap/fonts/**',
   'bsJSmin': './node_modules/bootstrap/dist/js/bootstrap.min.js',
