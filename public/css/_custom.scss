@@ -1,7 +1,34 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
-body {
-    padding-top: 50px;
-    margin-top: 50px;
+$tarnsition-s :.3s;
+a{
+  text-decoration: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,.1);
+  img,svg{
+    @include transition(opacity $tarnsition-s);
+  }
+  &:hover{
+    text-decoration: underline;
+    img,svg{
+      opacity: .7;
+    }
+  }
 }
+
+button,a.btn{
+  @include transition-property(opacity,color);
+  @include transition-duration($tarnsition-s);
+  -webkit-tap-highlight-color:rgba(0,0,0,.1);
+  img,svg{
+    @include transition(opacity $tarnsition-s);
+  }
+  &:hover{
+    text-decoration: none;
+    opacity: .7;
+    img,svg{
+      opacity: .7;
+    }
+  }
+}
+
