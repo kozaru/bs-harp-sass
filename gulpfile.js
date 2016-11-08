@@ -180,7 +180,9 @@ gulp.task('compresscss', function() {
 
 gulp.task('compressjs', function() {
   return gulp.src(config.sourceJS)
-    .pipe(uglify())
+    .pipe(uglify({
+      preserveComments: 'some'
+    }))
     .pipe(gulp.dest(config.distJS));
 });
 

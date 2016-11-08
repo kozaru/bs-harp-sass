@@ -1,0 +1,30 @@
+a{
+  text-decoration: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,.1);
+  img,svg{
+    @include transition(opacity $transition-s);
+  }
+  &:hover{
+    text-decoration: underline;
+    img,svg{
+      opacity: .7;
+    }
+  }
+}
+
+button,a.btn{
+  @include transition-property(opacity,color);
+  @include transition-duration($transition-s);
+  -webkit-tap-highlight-color:rgba(0,0,0,.1);
+  img,svg{
+    @include transition(opacity $transition-s);
+  }
+  &:hover{
+    text-decoration: none;
+    opacity: .7;
+    img,svg{
+      opacity: .7;
+    }
+  }
+}
+

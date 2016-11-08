@@ -1,0 +1,26 @@
+// for mediaquery
+// @include max-screen($screen-xs-max) {
+// }
+// @include min-screen($screen-md) {
+// }
+
+// @include min-screen($screen-sm,$screen-sm-max) {
+// }
+
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
