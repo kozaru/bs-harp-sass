@@ -72,6 +72,10 @@ $ harp compile;gulp dist
 ```
 
 ## Change Log
+### v.1.0.2 (2016.12)
+Change the structure of css
+Change all indent_style to 2space
+
 ### v.1.0.1 (2016.6)
 Fix bugs
 

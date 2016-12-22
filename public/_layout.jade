@@ -1,52 +1,53 @@
 doctype
 html(lang='ja')
-	head
-		meta(charset='utf-8')
-		meta(http-equiv='X-UA-Compatible',content='IE=edge')
-		meta(name='viewport' content='width=device-width, initial-scale=1')
-		title= pagename
-			| &nbsp;|&nbsp;
-			=sitetitle
-		link(rel='stylesheet' href='/css/main.css')
-		|<!--[if lt IE 9]>
-		|  <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
-		|  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
-		|<![endif]-->
-	body
-		block main
-			.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
-				.container
-					.navbar-header
-						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href='/index.html')= sitetitle
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav
-							for article, slug in public._data
-								li
-									a(href='/#{ slug }.html')= article.pagename
-							li.dropdown
-								a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-									| Subpage01
-									span.caret
-								ul.dropdown-menu
-									for article, slug in public.subpage01._data
-										li
-											a(href='/subpage01/#{ slug }.html')= article.pagename
-									for article, slug in public.subpage01.subpage03._data
-										li
-											a(href='/subpage01/subpage03/#{ slug }.html')= article.pagename
-							li.dropdown
-								a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-									| Subpage02
-									span.caret
-								ul.dropdown-menu
-									for article, slug in public.subpage02._data
-										li
-											a(href='/subpage02/#{ slug }.html')= article.pagename
-		!= yield
-		script(src='/js/jquery.min.js')
-		script(src='/js/bootstrap.min.js')
-		script(src='/js/custom.js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible',content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title= pagename
+      | &nbsp;|&nbsp;
+      =sitetitle
+    link(rel='stylesheet' href='/assets/css/main.css')
+    |<!--[if lt IE 9]>
+    |  <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+    |  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
+    |<![endif]-->
+  body
+    block main
+      .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='/index.html')= sitetitle
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              for article, slug in public._data
+                li
+                  a(href='/#{ slug }.html')= article.pagename
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Subpage01
+                  span.caret
+                ul.dropdown-menu
+                  for article, slug in public.subpage01._data
+                    li
+                      a(href='/subpage01/#{ slug }.html')= article.pagename
+                  for article, slug in public.subpage01.subpage03._data
+                    li
+                      a(href='/subpage01/subpage03/#{ slug }.html')= article.pagename
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Subpage02
+                  span.caret
+                ul.dropdown-menu
+                  for article, slug in public.subpage02._data
+                    li
+                      a(href='/subpage02/#{ slug }.html')= article.pagename
+    main.main
+      != yield
+    script(src='/assets/js/jquery.min.js')
+    script(src='/assets/js/bootstrap.min.js')
+    script(src='/assets/js/custom.js')

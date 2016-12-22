@@ -1,6 +1,7 @@
 {
   "globals": {
     "sitetitle": "Bs-Harp",
-    "uri": "http://example.com"
+    "uri": "http://example.com",
+    "date": "2016-12-22"
   }
 }
