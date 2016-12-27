@@ -1,3 +1,11 @@
+/*
+```
+//mapの読み込み
+$font-size-base: map-get($_font-size, 'base');
+```
+*/
+
+
 // default grid columns
 // default: 12
 // Bootstrap：variableを上書き用
@@ -35,3 +43,17 @@ $_line-height-base: $line-height-base;
 
 // base animation speed
 $_duration: 0.3s;
+
+// margin variation
+$_margin: (
+  'tiny': 10px,
+  'small': 15px,
+  'base': floor(map-get($_font-size, 'base') * $_line-height-base),
+  'large': 20px,
+  'huge': 30px
+);
+
+// line-height-computed
+// default://~20px
+// Bootstrap：variableを上書き用
+$_line-height-computed: map-get($_margin, 'base');//~20px

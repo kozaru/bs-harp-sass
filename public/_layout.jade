@@ -27,24 +27,12 @@ html(lang='ja')
               for article, slug in public._data
                 li
                   a(href='/#{ slug }.html')= article.pagename
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | css/Foundation
-                  span.caret
-                ul.dropdown-menu
-                  for article, slug in public.cssFoundation._data
-                    li
-                      a(href='/cssFoundation/#{ slug }.html')= article.pagename
+              li
+                a(href='/cssFoundation/index.html') css/Foundation
               li
                 a(href='/cssLayout/index.html') css/Layout
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | css/Object
-                  span.caret
-                ul.dropdown-menu
-                  for article, slug in public.cssObject._data
-                    li
-                      a(href='/cssObject/#{ slug }.html')= article.pagename
+              li
+                a(href='/cssObject/index.html') css/Object
     main.l-main
       .container
         h1= pagename

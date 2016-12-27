@@ -1,16 +1,20 @@
 /* #Ratio
    -------------------------------------------------------------------------- */
-/* `.c-ratio__content`には`padding`を指定できないので注意してください。
+/*
+// 伸縮用ボックス utility
+// プレフィックス（接頭辞）:`u-ratio`
+
+`.u-ratio__content`には`padding`を指定できないので注意してください。
 
 ```block
-<div class="c-ratio c-ratio--16to9">
-  <div class="c-ratio__content">
+<div class="u-ratio u-ratio--16to9">
+  <div class="u-ratio__content">
     <p></p>
   </div>
 </div>
 ```
 */
-.c-ratio {
+.u-ratio {
   // デフォルト アスペクト比1:1
   @include ratio('100%');
   // c-ratio内content

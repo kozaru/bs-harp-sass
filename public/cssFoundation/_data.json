@@ -2,21 +2,5 @@
   "index": {
     "pagename": "css/foundation",
     "description": "/assets/css/foundationディレクトリ / Foundationレイヤー"
-  },
-  "base": {
-    "pagename": "css/foundation/base",
-    "description": "ベースになるscssファイル用のディレクトリです"
-  },
-  "mixin": {
-    "pagename": "css/foundation/mixin",
-    "description": ""
-  },
-  "variable": {
-    "pagename": "css/foundation/variable",
-    "description": ""
-  },
-  "vender": {
-    "pagename": "css/foundation/vender",
-    "description": ""
   }
 }

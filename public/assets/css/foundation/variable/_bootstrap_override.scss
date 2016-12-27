@@ -67,7 +67,7 @@ $font-size-h6:            map-get($_font-size, 'h6');
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        $_line-height-base;
 // //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-// $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    $_line-height-computed; // ~20px
 
 // //** By default, this inherits from the `<body>`.
 // $headings-font-family:    inherit !default;
@@ -333,7 +333,7 @@ $screen-md-max:              ($screen-lg-min - 1);
 //** Number of columns in the grid.
 $grid-columns:              $_column;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         $_gutter-width;
+$grid-gutter-width:         $_breakpoint-gutter-width;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min;
@@ -346,17 +346,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-$container-tablet:             (map-get($_container-base, 'sm') + $grid-gutter-width);
+$container-tablet:             (map-get($_breakpoint-container-base, 'sm') + $grid-gutter-width);
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet;
 
 // Medium screen / desktop
-$container-desktop:            (map-get($_container-base, 'md') + $grid-gutter-width);
+$container-desktop:            (map-get($_breakpoint-container-base, 'md') + $grid-gutter-width);
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop;
 
 // Large screen / wide desktop
-$container-large-desktop:      (map-get($_container-base, 'lg') + $grid-gutter-width);
+$container-large-desktop:      (map-get($_breakpoint-container-base, 'lg') + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop;
 

@@ -1,5 +1,11 @@
-// Bootstrap：variableを上書き用
+/*
+```
+//mapの読み込み
+map-get($_breakpoint-min, 'xs')
+```
+*/
 
+// Bootstrap：variableを上書き用
 // min-width
 // default:480px/768px/992px/1200px
 $_breakpoint-min: (
@@ -19,11 +25,11 @@ $_breakpoint-max: (
 
 // gutter-width
 // default:30px
-$_gutter-width: 30px;
+$_breakpoint-gutter-width: 30px;
 
 // container-base (containerwidth = container-base + $grid-gutter-width)
 // default: 100%, 720px 940px 1140px
-$_container-base: (
+$_breakpoint-container-base: (
   'sm': 720px,
   'md': 940px,
   'lg': 1140px

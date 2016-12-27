@@ -37,15 +37,12 @@
    -------------------------------------------------------------------------- */
 /** Bootstrapにて代用*/
 @import "object/component/list";
-@import "object/component/ratio";
 
 /* -----------------------------------------------------------------------------
    #Project
    -------------------------------------------------------------------------- */
-@import "object/project/_icon";
-@import "object/project/_button";
-@import "object/project/_breadcrumb";
-@import "object/project/_box";
+@import "object/project/btn";
+@import "object/project/box";
 
 /* -----------------------------------------------------------------------------
    #Scope
@@ -55,7 +52,7 @@
 /* -----------------------------------------------------------------------------
    #Utility
    -------------------------------------------------------------------------- */
-/** Bootstrap + text/margin/width関連 */
+/** Bootstrap + text/marginなどutility関連 */
 @import "object/utility/text";
-@import "object/utility/margin";
-@import "object/utility/width";
+@import "object/utility/mb";//margin-bottom
+@import "object/utility/ratio";

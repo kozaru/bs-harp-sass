@@ -4,6 +4,8 @@
 `<section>`タグでその他のカテゴリに属さないもの
 セクションの余白（`margin`）を管理。
 コンポーネント単位での余白はobject/utility/_margin.scssで管理。
+
+プレフィックス（接頭辞）:`l-section`
 */
 .l-section {
 

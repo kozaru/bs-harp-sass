@@ -1,3 +1,40 @@
+/* 上記ファイルを変更しない場合は、Bootstrapベース
+```
+// xs（スマフォ最小幅）のmax以下
+@include layout-max('xs'){
+   // style
+};
+
+// lg（pc最大幅）のmin以上
+@include layout-min('lg'){
+   // style
+};
+
+// sm（タブレット）サイズ（max/minを設定）
+@include layout-maxmin('sm') {
+   // style
+}
+```
+
+pxを設定
+```
+// 400px以下
+@include layout-max-px('400px'){
+   // style
+};
+
+//　800px以下
+@include layout-min-px('800px'){
+   // style
+};
+
+// 600px以上、800px以下
+@include layout-maxmin-px('600px','800px') {
+   // style
+}
+```
+*/
+
 @mixin layout-max($break-point) {
   @media screen and (max-width: map-get($_breakpoint-max, $break-point)) {
     @content;
