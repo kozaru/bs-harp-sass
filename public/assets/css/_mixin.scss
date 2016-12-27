@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// Bootstrap mixins
+@import "foundation/vendor/bootstrap/bootstrap/mixins";
+
+// Foundation mixins
+// レイアウト用
+@import "foundation/mixin/layout";
+// ul/li list パーツ 用
+@import "foundation/mixin/list";
+// ratio パーツ 用（伸縮するBoxレイアウト）
+@import "foundation/mixin/ratio";

@@ -1,0 +1,40 @@
+/* #Ratio
+   -------------------------------------------------------------------------- */
+/*
+// 伸縮用ボックス utility
+// プレフィックス（接頭辞）:`u-ratio`
+
+`.u-ratio__content`には`padding`を指定できないので注意してください。
+
+```block
+<div class="u-ratio u-ratio--16to9">
+  <div class="u-ratio__content">
+    <p></p>
+  </div>
+</div>
+```
+*/
+.u-ratio {
+  // デフォルト アスペクト比1:1
+  @include ratio('100%');
+  // c-ratio内content
+  &__content{
+    @include ratio_content();
+  }
+  // Modifierアスペクト比16:9 `--16to9`
+  &--16to9 {
+  padding-bottom: percentage(9 / 16);
+  }
+  // Modifierアスペクト比4:3 `--4to3`
+  &--4to3 {
+  padding-bottom: percentage(3 / 4);
+  }
+  // Modifierアスペクト比3:2 `--3to2`
+  &--3to2 {
+  padding-bottom: percentage(2 / 3);
+  }
+  // Modifierアスペクト比2:1 `--2to1`
+  &--2to1 {
+  padding-bottom: percentage(1 / 2);
+  }
+}

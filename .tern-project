@@ -1,8 +1,0 @@
-{
-  "libs": [ "browser", "jquery" ],
-  "loadEagerly": [ "*.js", "*/*.js", "*/*/*.js", "*/*/*/*.js" ],
-  "dontLoad": [ "node_modules" ],
-  "plugins": {
-    "complete_strings": {}
-  }
-}

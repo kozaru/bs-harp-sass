@@ -1,9 +1,14 @@
+'use strict';
+
+/**
+ * Gulp modules
+ */
 var gulp = require('gulp');
+var newer = require('gulp-newer');
 var copy = require('gulp-copy');
 var prettify = require('gulp-html-prettify');
 var imagemin = require('gulp-imagemin');
 var pngquant  = require('imagemin-pngquant');
-var newer = require('gulp-newer');
 var runSequence = require('run-sequence');
 var csscomb = require('gulp-csscomb');
 var cssnano = require('gulp-cssnano');
@@ -17,6 +22,8 @@ var path = require('path');
 
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
+
+var shell = require('gulp-shell');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 9',
@@ -32,21 +39,21 @@ var config = {
   'relativePath': true,
   'source': './www/**',
   'sourceHTML': './www/*.html',
-  'sourceCSS': './www/css/*.css',
-  'sourceJS': './www/js/*.js',
-  'sourceIMG': './www/images/**',
+  'sourceCSS': './www/assets/css/*.css',
+  'sourceJS': './www/assets/js/*.js',
+  'sourceIMG': './www/assets/images/**',
   'dist': './dist/',
   'distHTML': './dist/*.html',
-  'distCSS': './dist/css/',
-  'distJS': './dist/js/',
-  'distIMG': './dist/images/',
+  'distCSS': './dist/assets/css/',
+  'distJS': './dist/assets/js/',
+  'distIMG': './dist/assets/images/',
   'bsSass': './node_modules/bootstrap-sass/assets/stylesheets/**',
   'bsFONT': './node_modules/bootstrap/fonts/**',
   'bsJSmin': './node_modules/bootstrap/dist/js/bootstrap.min.js',
   'bsJQUERY': './node_modules/jquery/dist/jquery.min.js',
-  'publicSass': './public/css/',
-  'publicFONT': './public/fonts/',
-  'publicJS': './public/js/'
+  'publicSass': './public/assets/css/',
+  'publicFONT': './public/assets/fonts/',
+  'publicJS': './public/assets/js/'
 }
 
 // extract directory
@@ -207,13 +214,19 @@ gulp.task('pretty', function() {
   }
 });
 
+gulp.task('compile', shell.task([
+  'harp compile'
+]));
+
 gulp.task('dist', function() {
   runSequence(
+    'compile',
     'copysource',
     ['compresscss','compressjs','copyimg','pretty'],
     'changeRelativePath'
   );
 });
+
 
 gulp.task('watch', function() {
   gulp.watch(config.sourceHTML, ['pretty']);

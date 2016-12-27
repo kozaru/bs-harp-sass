@@ -1,14 +1,22 @@
 {
   "index": {
     "pagename": "Home",
-    "date": "2015-05-10"
+    "description": ""
   },
-  "about": {
-    "pagename": "About",
-    "date": "2015-05-11"
+  "single": {
+    "pagename": "single",
+    "description": "/assets/css/_single.scss"
   },
-  "contact": {
-    "pagename": "Contact",
-    "date": "2015-05-12"
+  "bootstrap": {
+    "pagename": "bootstrap",
+    "description": "/assets/css/_bootstrap.scss"
+  },
+  "mixin": {
+    "pagename": "mixin",
+    "description": "/assets/css/_mixin.scss"
+  },
+  "variable": {
+    "pagename": "variable",
+    "description": "/assets/css/_variable.scss"
   }
 }

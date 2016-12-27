@@ -1,0 +1,14 @@
+// base color
+// default: 12
+// Bootstrap：variableを上書き用
+$_color-text: $gray-dark;
+$_color-bg: $body-bg;
+
+// link color
+$_color-link: $brand-primary;
+$_color-link-hover: lighten($_color-link, 15%);
+
+
+// component color
+// $color-ui-border: #ddd;
+// $color-ui-bg: #fff;

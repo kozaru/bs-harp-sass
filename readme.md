@@ -52,12 +52,6 @@ control + c
 
 ### Compile source
 
-Compile source in /public/www
-
-```
-$ harp compile
-```
-
 Compile source non-minify-html in /dist
 
 If you don't need to convert relative path to the dist directory, you change config.relativePath to false in gulpfile.js.
@@ -66,12 +60,19 @@ If you don't need to convert relative path to the dist directory, you change con
 $ gulp dist
 ```
 
-Compile both source at the same time
-```
-$ harp compile;gulp dist
-```
+## The Structure of Css
+
+Coding rules are based on the following links.
+
+- [styleguide](https://github.com/manabuyasuda/styleguide)
+- [equip](https://github.com/manabuyasuda/equip)
 
 ## Change Log
+### v.1.0.2 (2016.12)
+Change the structure of css
+Change all indent_style to 2space
+Change Compile source
+
 ### v.1.0.1 (2016.6)
 Fix bugs
 
