@@ -51,6 +51,7 @@ var config = {
   'bsFONT': './node_modules/bootstrap/fonts/**',
   'bsJSmin': './node_modules/bootstrap/dist/js/bootstrap.min.js',
   'bsJQUERY': './node_modules/jquery/dist/jquery.min.js',
+  'vendorBs': './public/assets/css/foundation/vendor/bootstrap/',
   'publicSass': './public/assets/css/',
   'publicFONT': './public/assets/fonts/',
   'publicJS': './public/assets/js/'
@@ -141,7 +142,7 @@ gulp.task('server', function () {
 
 gulp.task('bsSass', function() {
   return gulp.src(config.bsSass)
-  .pipe(gulp.dest(config.publicSass));
+  .pipe(gulp.dest(config.vendorBs));
 });
 
 gulp.task('bsfonts', function() {
