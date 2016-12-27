@@ -1,6 +1,9 @@
  /* #List
    -------------------------------------------------------------------------- */
 /* ul, ol */
-.c-list-unstyled {
-  @include list-unstyled();
+.c-list{
+  // 装飾がないリスト
+  &--unstyled {
+    @include list-unstyled();
+  }
 }

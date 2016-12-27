@@ -1,9 +1,13 @@
 @charset "UTF-8";
 
 // Bootstrap variables
-@import "bootstrap/variables";
+@import "foundation/vendor/bootstrap/bootstrap/variables";
+
 // Foundation variables
-@import "foundation/variable/_global";
-@import "foundation/variable/_breakpoint";
-@import "foundation/variable/_font-family";
-@import "foundation/variable/_color";
+@import "foundation/variable/global";
+@import "foundation/variable/breakpoint";
+@import "foundation/variable/font-family";
+@import "foundation/variable/color";
+
+// Bootstrap variables + override (Foundation variables)
+@import "foundation/variable/bootstrap_override";

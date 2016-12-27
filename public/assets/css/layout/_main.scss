@@ -5,6 +5,7 @@
 セクションの余白（`margin`）を管理。
 コンポーネント単位での余白はobject/utility/_margin.scssで管理。
 */
-#l-main {
-
+.l-main {
+  // header分のheight fixedの場合
+  margin-top: $navbar-height;
 }

@@ -3,83 +3,41 @@
 /* =============================================================================
    #variables and mixin
    ========================================================================== */
-@import "variables";
+@import "variable";
 @import "mixin";
 
 /* =============================================================================
    #Bootstrap
    ========================================================================== */
-// Reset and dependencies
-@import "bootstrap/normalize";
-// @import "bootstrap/print";
-// @import "bootstrap/glyphicons";
-
-// Core CSS
-@import "bootstrap/scaffolding";
-@import "bootstrap/type";
-@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
-
-// Components
-@import "bootstrap/component-animations";
-// @import "bootstrap/dropdowns";
-// @import "bootstrap/button-groups";
-// @import "bootstrap/input-groups";
-// @import "bootstrap/navs";
-// @import "bootstrap/navbar";
-// @import "bootstrap/breadcrumbs";
-// @import "bootstrap/pagination";
-// @import "bootstrap/pager";
-// @import "bootstrap/labels";
-// @import "bootstrap/badges";
-// @import "bootstrap/jumbotron";
-// @import "bootstrap/thumbnails";
-// @import "bootstrap/alerts";
-// @import "bootstrap/progress-bars";
-// @import "bootstrap/media";
-// @import "bootstrap/list-group";
-// @import "bootstrap/panels";
-// @import "bootstrap/responsive-embed";
-// @import "bootstrap/wells";
-// @import "bootstrap/close";
-
-// // Components w/ JavaScript
-// @import "bootstrap/modals";
-// @import "bootstrap/tooltip";
-// @import "bootstrap/popovers";
-// @import "bootstrap/carousel";
-
-// Utility classes
-@import "bootstrap/utilities";
-@import "bootstrap/responsive-utilities";
-
+@import "bootstrap";
 
 /* =============================================================================
    #Layout
    ========================================================================== */
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_main";
-@import "layout/_sidebar";
-@import "layout/_section";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/section";
 
 /* =============================================================================
    #Object
    ========================================================================== */
 /**
  * 1. Component（`c-`）多くのプロジェクトで横断的に再利用できるような小さな単位のモジュール/Bootstrapにて代用あれば随時追加
- * 2. Project（`p-`）プロジェクト固有のスタイル
- * 3. Scope(`s-`) classセレクタと要素セレクタの子孫セレクタでスタイルを指定する（記事ブロック用）
+ * 2. Project（`p-`）プロジェクト固有のスタイル（各ブロックやテーマに埋めこむパーツごとにファイルを作成）
+ * 3. Scope(`s-`) classセレクタと要素セレクタの子孫セレクタでスタイルを指定する（記事ブロック/HTMLブロック用）
  * 4. Utility（`u-`）汎用クラス Bootstrapにて代用あれば随時追加
  */
 
 /* -----------------------------------------------------------------------------
    #Component
+   assets/css/object/component/ディレクトリ内
+   _listディレクトリの場合:prefix c-list
    -------------------------------------------------------------------------- */
 /** Bootstrapにて代用*/
+@import "object/component/list";
+@import "object/component/ratio";
 
 /* -----------------------------------------------------------------------------
    #Project
@@ -92,16 +50,12 @@
 /* -----------------------------------------------------------------------------
    #Scope
    -------------------------------------------------------------------------- */
-@import "object/scope/_article";
+@import "object/scope/article";
 
 /* -----------------------------------------------------------------------------
    #Utility
    -------------------------------------------------------------------------- */
-@import "object/utility/_text";
-@import "object/utility/_align";
-@import "object/utility/_margin";
-@import "object/utility/_display";
-@import "object/utility/_width";
-@import "object/utility/_offset";
-@import "object/utility/_percent";
-@import "object/utility/_sr-only";
+/** Bootstrap + text/margin/width関連 */
+@import "object/utility/text";
+@import "object/utility/margin";
+@import "object/utility/width";

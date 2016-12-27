@@ -7,13 +7,13 @@ html(lang='ja')
     title= pagename
       | &nbsp;|&nbsp;
       =sitetitle
-    link(rel='stylesheet' href='/assets/css/main.css')
+    link(rel='stylesheet' href='/assets/css/style.css')
     |<!--[if lt IE 9]>
     |  <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     |  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     |<![endif]-->
   body
-    block main
+    header.l-header
       .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
         .container
           .navbar-header
@@ -29,25 +29,27 @@ html(lang='ja')
                   a(href='/#{ slug }.html')= article.pagename
               li.dropdown
                 a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | Subpage01
+                  | css/Foundation
                   span.caret
                 ul.dropdown-menu
-                  for article, slug in public.subpage01._data
+                  for article, slug in public.cssFoundation._data
                     li
-                      a(href='/subpage01/#{ slug }.html')= article.pagename
-                  for article, slug in public.subpage01.subpage03._data
-                    li
-                      a(href='/subpage01/subpage03/#{ slug }.html')= article.pagename
+                      a(href='/cssFoundation/#{ slug }.html')= article.pagename
+              li
+                a(href='/cssLayout/index.html') css/Layout
               li.dropdown
                 a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                  | Subpage02
+                  | css/Object
                   span.caret
                 ul.dropdown-menu
-                  for article, slug in public.subpage02._data
+                  for article, slug in public.cssObject._data
                     li
-                      a(href='/subpage02/#{ slug }.html')= article.pagename
-    main.main
-      != yield
+                      a(href='/cssObject/#{ slug }.html')= article.pagename
+    main.l-main
+      .container
+        h1= pagename
+        p= description
+        != yield
     script(src='/assets/js/jquery.min.js')
     script(src='/assets/js/bootstrap.min.js')
     script(src='/assets/js/custom.js')

@@ -1,3 +1,35 @@
-@mixin layout() {
+@mixin layout-max($break-point) {
+  @media screen and (max-width: map-get($_breakpoint-max, $break-point)) {
+    @content;
+  }
+}
 
+@mixin layout-min($break-point) {
+  @media screen and (min-width: map-get($_breakpoint-min, $break-point)) {
+    @content;
+  }
+}
+
+@mixin layout-maxmin($break-point) {
+  @media screen and (min-width: map-get($_breakpoint-min, $break-point)) and (max-width: map-get($_breakpoint-max, $break-point)) {
+    @content;
+  }
+}
+
+@mixin layout-max-px($break-point-px) {
+  @media screen and (max-width: $break-point-px) {
+    @content;
+  }
+}
+
+@mixin layout-min-px($break-point-px) {
+  @media screen and (min-width: $break-point-px) {
+    @content;
+  }
+}
+
+@mixin layout-maxmin-px($break-point-min-px,$break-point-max-px) {
+  @media screen and (min-width: $break-point-min-px) and (max-width: $break-point-max-px) {
+    @content;
+  }
 }
