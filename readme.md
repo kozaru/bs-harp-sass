@@ -2,59 +2,99 @@
 
 Harp + browser-sync + Bootstrap-Sass
 
-## Install
+## Install（インストール）
 
-### 1. Node.js
+### 1. Node.js and npm
+
+Node.jsをインストール
 
 [Node.js](http://nodejs.org/)
 
 ### 2. Harp
+
+Harpをインストール
 
 [Harp](http://harpjs.com/) - the static web server with built-in preprocessing
 ```
 $ sudo npm install -g harp
 ```
 
-### 3. Download Bs-Harp or git clone Bs-Harp
+### 3. bs-harp-sass repository（Download or git clone）
+
+bs-harp-sass リポジトリをダウンロード、または git clone
+
 
 ### 4. Install some node-module
+
+node-moduleをインストール
+
 ```
+$ cd bs-harp-sass
 $ npm install
 ```
 
 ## Usage
 
+使い方
+
 ### Start using LiveReload
 
-Start http://localhost:9000
+Start harp server
+
+harp server を起動
 
 ```
 $ harp server
 ```
 
-and start proxying: http://localhost:9000 and http://localhost:3000
+and open a new tab
+
+新しいタブを開く
+
+command + t
+
+
+Start proxy of harp server using browsersync Livereload on that tab
+
+そのタブでbrowsersync Livereloadを使って harp server のプロキシを開始
 
 ```
 $ gulp server
 ```
 
-### Write the code to jade files
+### Write the code to jade files or the content to markdown files
+
+jadeファイルにコードを書く または、マークダウンするコンテンツを書く
 
 When you write the code to jade files , there is a need to write root path.
 
-```index.jade
-img(src="/images/demo.png", alt="demo")
+jadeファイルにコードを書くときには、ルートパスを書く必要がある
+
+```_layout.jade
+img(src="/assets/images/demo.png", alt="demo")
 ```
 
-#### Finish using LiveReload
+#### Finish LiveReload and harp server
+
+LiveReloadとハープサーバーを終了する
+
+On the corresponding tab
+
+該当タブで
 
 control + c
 
 ### Compile source
 
+コンパイル方法
+
 Compile source non-minify-html in /dist
 
+コンパイルされたHTMLは  /distディレクトリ内に保存され　non-minify-html になる
+
 If you don't need to convert relative path to the dist directory, you change config.relativePath to false in gulpfile.js.
+
+相対パスを`dist`ディレクトリに変換する必要がない場合は、gulpfile.jsでconfig.relativePathをfalseに変更
 
 ```
 $ gulp dist
@@ -68,6 +108,10 @@ Coding rules are based on the following links.
 - [equip](https://github.com/manabuyasuda/equip)
 
 ## Change Log
+
+### v.1.0.3 (2016.12)
+Add Japanese to Readme
+
 ### v.1.0.2 (2016.12)
 Change the structure of css
 Change all indent_style to 2space
