@@ -71,9 +71,9 @@ If you don't need to convert relative path to the dist directory, you change con
 $ gulp dist
 ```
 
-## The Structure of Css
+## The Structure of Css（Css構造）
 
-Coding rules are based on the following links.
+Coding rules are based on the following links.（コーディング規則は、以下のリンクをベースに作成）
 
 - [styleguide](https://github.com/manabuyasuda/styleguide)
 - [equip](https://github.com/manabuyasuda/equip)
