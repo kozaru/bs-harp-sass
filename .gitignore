@@ -1,6 +1,6 @@
 bower/*
 dist/*
 node_modules/*
-public/assets/css/foundation/vendor/bootstrap/*
+public/assets/css/vendor/bootstrap/*
 public/assets/fonts/*
 www/*
