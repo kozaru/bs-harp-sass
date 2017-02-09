@@ -5,3 +5,20 @@
  * 要素セレクタや属性セレクタなど、詳細度はできるかぎり低く保っておきます。
  * 基本的にclass属性は使用しません。
  */
+body{
+  font-feature-settings: pkna;
+}
+a{
+  img,svg{
+    //chrome対策
+    backface-visibility: hidden;
+    @include transition-property(opacity);
+    @include transition-duration($_global-duration);
+  }
+  &:hover{
+    cursor: pointer;
+    img,svg{
+      @include opacity($_global-opacity);
+    }
+  }
+}

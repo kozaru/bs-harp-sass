@@ -26,12 +26,11 @@ var browserSync = require('browser-sync').create();
 var shell = require('gulp-shell');
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 9',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
+  'ie >= 11',
+  'ff >= 50',
+  'chrome >= 50',
+  'safari >= 10',
+  'ios >= 10',
   'android >= 4.4'
 ];
 

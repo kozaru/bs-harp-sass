@@ -36,3 +36,16 @@ $_breakpoint-container-base: (
 );
 
 // Bootstrap：variableを上書き用ここまで
+
+$_breakpoint-min-xs: map-get($_breakpoint-min, 'xs');
+$_breakpoint-min-sm: map-get($_breakpoint-min, 'sm');
+$_breakpoint-min-md: map-get($_breakpoint-min, 'md');
+$_breakpoint-min-lg: map-get($_breakpoint-min, 'lg');
+
+$_breakpoint-max-xs: map-get($_breakpoint-max, 'xs');
+$_breakpoint-max-sm: map-get($_breakpoint-max, 'sm');
+$_breakpoint-max-md: map-get($_breakpoint-max, 'md');
+
+$_breakpoint-container-base-sm: map-get($_breakpoint-container-base, 'sm');
+$_breakpoint-container-base-md: map-get($_breakpoint-container-base, 'md');
+$_breakpoint-container-base-lg: map-get($_breakpoint-container-base, 'lg');

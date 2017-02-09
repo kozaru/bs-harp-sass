@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// Bootstrap mixins
+@import "../vendor/bootstrap/bootstrap/mixins";
+
+// Foundation mixins
+// レイアウト用
+@import "layout";
+// ul/li list パーツ 用
+@import "list";
+// 画像パーツ 用
+@import "image";

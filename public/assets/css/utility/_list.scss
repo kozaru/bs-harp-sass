@@ -1,12 +1,11 @@
- /* #List
+ /* #list
    -------------------------------------------------------------------------- */
-// ul/ol/dl リストタグ用のcomponent
-// プレフィックス（接頭辞）:`c-list`
+
 
 /* ul, ol */
-.c-list{
+.u-list{
   // 装飾がないリスト
-  &--unstyled {
+  &__unstyled {
     @include list-unstyled();
   }
 }

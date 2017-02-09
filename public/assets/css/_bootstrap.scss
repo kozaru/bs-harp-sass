@@ -2,55 +2,49 @@
    #Bootstrap
    ========================================================================== */
 // Reset and dependencies
-@import "foundation/vendor/bootstrap/bootstrap/normalize";
-// @import "foundation/vendor/bootstrap/bootstrap/print";
-// @import "foundation/vendor/bootstrap/bootstrap/glyphicons";
+@import "vendor/bootstrap/bootstrap/normalize";
+// @import "vendor/bootstrap/bootstrap/print";
+// @import "vendor/bootstrap/bootstrap/glyphicons";
 
 // Core CSS
-@import "foundation/vendor/bootstrap/bootstrap/scaffolding";
-@import "foundation/vendor/bootstrap/bootstrap/type";
-@import "foundation/vendor/bootstrap/bootstrap/code";
-@import "foundation/vendor/bootstrap/bootstrap/grid";
-@import "foundation/vendor/bootstrap/bootstrap/tables";
-@import "foundation/vendor/bootstrap/bootstrap/forms";
-@import "foundation/vendor/bootstrap/bootstrap/buttons";
+@import "vendor/bootstrap/bootstrap/scaffolding";
+@import "vendor/bootstrap/bootstrap/type";
+@import "vendor/bootstrap/bootstrap/code";
+@import "vendor/bootstrap/bootstrap/grid";
+@import "vendor/bootstrap/bootstrap/tables";
+@import "vendor/bootstrap/bootstrap/forms";
+@import "vendor/bootstrap/bootstrap/buttons";
 
 // Components
-@import "foundation/vendor/bootstrap/bootstrap/component-animations";
+@import "vendor/bootstrap/bootstrap/component-animations";
 
-// Bootstrapのnavbarを使用しない場合は、コメントアウトする
-@import "foundation/vendor/bootstrap/bootstrap/dropdowns";
-// @import "foundation/vendor/bootstrap/bootstrap/button-groups";
-// @import "foundation/vendor/bootstrap/bootstrap/input-groups";
-
-// Bootstrapのnavbarを使用しない場合は、コメントアウトする
-@import "foundation/vendor/bootstrap/bootstrap/navs";
-
-// Bootstrapのnavbarを使用しない場合は、コメントアウトする
-@import "foundation/vendor/bootstrap/bootstrap/navbar";
-
-// @import "foundation/vendor/bootstrap/bootstrap/breadcrumbs";
-// @import "foundation/vendor/bootstrap/bootstrap/pagination";
-// @import "foundation/vendor/bootstrap/bootstrap/pager";
-// @import "foundation/vendor/bootstrap/bootstrap/labels";
-// @import "foundation/vendor/bootstrap/bootstrap/badges";
-// @import "foundation/vendor/bootstrap/bootstrap/jumbotron";
-// @import "foundation/vendor/bootstrap/bootstrap/thumbnails";
-// @import "foundation/vendor/bootstrap/bootstrap/alerts";
-// @import "foundation/vendor/bootstrap/bootstrap/progress-bars";
-// @import "foundation/vendor/bootstrap/bootstrap/media";
-// @import "foundation/vendor/bootstrap/bootstrap/list-group";
-// @import "foundation/vendor/bootstrap/bootstrap/panels";
-// @import "foundation/vendor/bootstrap/bootstrap/responsive-embed";
-// @import "foundation/vendor/bootstrap/bootstrap/wells";
-// @import "foundation/vendor/bootstrap/bootstrap/close";
+// @import "vendor/bootstrap/bootstrap/dropdowns";
+// @import "vendor/bootstrap/bootstrap/button-groups";
+@import "vendor/bootstrap/bootstrap/input-groups";
+@import "vendor/bootstrap/bootstrap/navs";
+@import "vendor/bootstrap/bootstrap/navbar";
+// @import "vendor/bootstrap/bootstrap/breadcrumbs";
+// @import "vendor/bootstrap/bootstrap/pagination";
+// @import "vendor/bootstrap/bootstrap/pager";
+// @import "vendor/bootstrap/bootstrap/labels";
+// @import "vendor/bootstrap/bootstrap/badges";
+// @import "vendor/bootstrap/bootstrap/jumbotron";
+// @import "vendor/bootstrap/bootstrap/thumbnails";
+// @import "vendor/bootstrap/bootstrap/alerts";
+// @import "vendor/bootstrap/bootstrap/progress-bars";
+// @import "vendor/bootstrap/bootstrap/media";
+// @import "vendor/bootstrap/bootstrap/list-group";
+// @import "vendor/bootstrap/bootstrap/panels";
+// @import "vendor/bootstrap/bootstrap/responsive-embed";
+// @import "vendor/bootstrap/bootstrap/wells";
+// @import "vendor/bootstrap/bootstrap/close";
 
 // // Components w/ JavaScript
-// @import "foundation/vendor/bootstrap/bootstrap/modals";
-// @import "foundation/vendor/bootstrap/bootstrap/tooltip";
-// @import "foundation/vendor/bootstrap/bootstrap/popovers";
-// @import "foundation/vendor/bootstrap/bootstrap/carousel";
+// @import "vendor/bootstrap/bootstrap/modals";
+// @import "vendor/bootstrap/bootstrap/tooltip";
+// @import "vendor/bootstrap/bootstrap/popovers";
+// @import "vendor/bootstrap/bootstrap/carousel";
 
 // Utility classes
-@import "foundation/vendor/bootstrap/bootstrap/utilities";
-@import "foundation/vendor/bootstrap/bootstrap/responsive-utilities";
+@import "vendor/bootstrap/bootstrap/utilities";
+@import "vendor/bootstrap/bootstrap/responsive-utilities";

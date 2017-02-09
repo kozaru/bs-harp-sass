@@ -47,7 +47,7 @@ pxを設定
   }
 }
 
-@mixin layout-maxmin($break-point) {
+@mixin layout-minmax($break-point) {
   @media screen and (min-width: map-get($_breakpoint-min, $break-point)) and (max-width: map-get($_breakpoint-max, $break-point)) {
     @content;
   }
@@ -65,8 +65,28 @@ pxを設定
   }
 }
 
-@mixin layout-maxmin-px($break-point-min-px,$break-point-max-px) {
+@mixin layout-minmax-px($break-point-min-px,$break-point-max-px) {
   @media screen and (min-width: $break-point-min-px) and (max-width: $break-point-max-px) {
     @content;
   }
 }
+
+@mixin layout-block-center(){
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin layout-col($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage(( 1 / $columns));
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+
+@mixin layout-col-padding($gutter: $grid-gutter-width) {
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+
