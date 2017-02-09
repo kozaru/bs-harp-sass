@@ -50,7 +50,7 @@ var config = {
   'bsFONT': './node_modules/bootstrap/fonts/**',
   'bsJSmin': './node_modules/bootstrap/dist/js/bootstrap.min.js',
   'bsJQUERY': './node_modules/jquery/dist/jquery.min.js',
-  'vendorBs': './public/assets/css/foundation/vendor/bootstrap/',
+  'vendorBs': './public/assets/css/vendor/bootstrap/',
   'publicSass': './public/assets/css/',
   'publicFONT': './public/assets/fonts/',
   'publicJS': './public/assets/js/'
