@@ -13,33 +13,11 @@ html(lang='ja')
     |  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     |<![endif]-->
   body
-    header.l-header
-      .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
-        .container
-          .navbar-header
-            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a.navbar-brand(href='/index.html')= sitetitle
-          .collapse.navbar-collapse
-            ul.nav.navbar-nav
-              for article, slug in public._data
-                li
-                  a(href='/#{ slug }.html')= article.pagename
-              li
-                a(href='/cssFoundation/index.html') css/Foundation
-              li
-                a(href='/cssLayout/index.html') css/Layout
-              li
-                a(href='/cssObject/index.html') css/Object
+    != partial("_header/html")
     main.l-main
       .container
-        h1= pagename
-        p= description
         != yield
-        hr
-        img(src="/assets/images/demo.png", alt="demo")
+    != partial("_footer/html")
     script(src='/assets/js/jquery.min.js')
     script(src='/assets/js/bootstrap.min.js')
     script(src='/assets/js/custom.js')

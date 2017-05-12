@@ -5,18 +5,10 @@
   },
   "single": {
     "pagename": "single",
-    "description": "/assets/css/_single.scss"
+    "description": ""
   },
   "bootstrap": {
     "pagename": "bootstrap",
-    "description": "/assets/css/_bootstrap.scss"
-  },
-  "mixin": {
-    "pagename": "mixin",
-    "description": "/assets/css/_mixin.scss"
-  },
-  "variable": {
-    "pagename": "variable",
-    "description": "/assets/css/_variable.scss"
+    "description": ""
   }
 }
