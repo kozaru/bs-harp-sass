@@ -73,6 +73,9 @@ $ gulp dist
 
 ## Change Log
 
+### v.1.0.5 (2016.5)
+Fix file structure
+
 ### v.1.0.4 (2017.1)
 CSS structor
 
